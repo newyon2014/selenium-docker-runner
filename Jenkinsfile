@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: 'output/*.*'
+			archiveArtifacts artifacts: 'output/test-results/**'
 			sh "docker-compose down"
 			sh "sudo rm -rf output/"
 		}
